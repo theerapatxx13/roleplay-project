@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roleplay Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#60a5fa;
+}
+
+.members{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.member{
+    background:#334155;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.buttons{
+    text-align:center;
+    margin-top:30px;
+}
+
+.buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.powerbi{
+    background:#eab308;
+}
+
+.tableau{
+    background:#2563eb;
+}
+
+.buttons a:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.7;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Data Warehouse Project</h1>
+    <p>Roleplay & Business Intelligence Dashboard</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Project Overview</h2>
+
+        <p>
+        โครงงานนี้จัดทำขึ้นเพื่อศึกษาการสร้าง Data Warehouse,
+        ETL Process และ Data Visualization
+        โดยใช้ Power BI และ Tableau
+        </p>
+    </div>
+
+    <div class="card">
+
+        <h2>Group Members</h2>
+
+        <div class="members">
+
+            <div class="member">
+                <h3>Theerapat</h3>
+                <p>Database & Website</p>
+            </div>
+
+            <div class="member">
+                <h3>Member 2</h3>
+                <p>ETL Process</p>
+            </div>
+
+            <div class="member">
+                <h3>Member 3</h3>
+                <p>Power BI Dashboard</p>
+            </div>
+
+            <div class="member">
+                <h3>Member 4</h3>
+                <p>Tableau Dashboard</p>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <a class="powerbi" href="powerbi.html">
+                View Power BI
+            </a>
+
+            <a class="tableau" href="tableau.html">
+                View Tableau
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Roleplay Project
+</footer>
+
+</body>
+</html>
