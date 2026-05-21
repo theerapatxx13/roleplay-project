@@ -1,58 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Dashboard</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- นำเข้าฟอนต์ Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<title>Power BI Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            /* พื้นหลังสีเข้ม โทน Modern Indian แบบเดียวกับหน้าแรก */
+            background-color: #12091c;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(212, 20, 90, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(251, 176, 59, 0.15) 0px, transparent 50%);
+            color: #fdfcfd;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-body{
-    margin:0;
-    background:#0f172a;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
+        /* แถบด้านบนสำหรับปุ่ม Back และ หัวข้อ */
+        .top-bar {
+            width: 95%;
+            max-width: 1400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+            position: relative;
+        }
 
-h1{
-    padding:20px;
-}
+        /* ปุ่มย้อนกลับดีไซน์ Glassmorphism */
+        .back-btn {
+            position: absolute;
+            left: 0;
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #e2dbea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 400;
+            font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
 
-iframe{
-    width:95%;
-    height:80vh;
-    border:none;
-    border-radius:20px;
-}
+        .back-btn:hover {
+            background: rgba(212, 20, 90, 0.15);
+            color: #fff;
+            border-color: rgba(251, 176, 59, 0.5);
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-a{
-    display:inline-block;
-    margin:20px;
-    padding:12px 25px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-}
+        h1 {
+            color: #FFC300; /* สีทอง Marigold Gold */
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-</style>
+        /* คอนเทนเนอร์ใส่ Iframe แบบ Glassmorphism */
+        .dashboard-container {
+            width: 95%;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        iframe {
+            width: 100%;
+            height: 75vh;
+            border: none;
+            border-radius: 16px;
+            background: #ffffff; /* กันพื้นหลัง iframe โปร่งใสแล้วมองเห็นสีกลืนกัน */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 0;
+            }
+            .back-btn {
+                position: relative;
+                align-self: flex-start;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .dashboard-container {
+                padding: 10px;
+                border-radius: 16px;
+            }
+            iframe {
+                height: 65vh;
+                border-radius: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<a href="index.html">← Back Home</a>
+    <div class="top-bar">
+        <a href="index.html" class="back-btn">← Back Home</a>
+        <h1>Power BI Dashboard</h1>
+    </div>
 
-<h1>Power BI Dashboard</h1>
-
-<iframe
-src="ใส่ลิงก์ Power BI ตรงนี้"
-allowfullscreen>
-</iframe>
+    <div class="dashboard-container">
+        <iframe 
+            src="ใส่ลิงก์ Power BI ตรงนี้" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
 </body>
 </html>
